@@ -8,25 +8,74 @@
     <link rel="shortcut icon" href="assets/basketball_.png" type="image/x-icon">
 </head>
 <body>
-    <nav>
-        <div class="nav__left">
-            <h1 class="nav__left__logo"> Site Basket</h1>
+    <header>
+        <div class="header__left">
+            <h1 class="header__left__logo"> Site Basket</h1>
         </div>
-        <ul class="nav__right">
-            <li class="nav__right__research">  <img src="assets/search.png" alt="Recherche">Recherche </li>
-            <li class="nav__right__likedtopic"> <img src="assets/like.png" alt="Liste des like"> Liste des topics</li>
-            <li class="nav__right__connect"> <img src="assets/connexion.png" alt="Connexion">Connexion</li>
+        <ul class="header__right">
+            <li class="header__right__research">
+                <a href="/recherche">
+                    <div>
+                        <img src="assets/search.png" alt="Recherche">Recherche </li>
+                    </div>
+                </a>
+            <li class="header__right__likedtopic"> 
+                <a href="/liked">
+                    <div>
+                        <img src="assets/like.png" alt="Liste des like"> Liste des topics</li>
+                    </div>
+                </a>
+            <li class="header__right__connect">
+                <a href="/connexion">
+                    <div>
+                        <img src="assets/connexion.png" alt="Connexion">Connexion</li>
+                    </div>
+                </a>
         </ul>
-    </nav>
+    </header>
     <div class="wrapper">
-        <ul class="side-nav">
-            <li class="side-nav__article"> <img src="assets/article.png" alt="Article"> Article</li>
-            <li class="side-nav__daygame"> <img src="assets/ball.png" alt="Match du jour">Match du jour</li>
-            <li class="side-nav__teams"> <img src="assets/team.png" alt="Équipe"> Équipe</li>
-            <li class="side-nav__scoreboard"> <img src="assets/scoreboard.png" alt="Classement"> Classement</li>
-            <li class="side-nav__tournament"> <img src="assets/tournament.png" alt="inseason tournament"> In Season Tournament</li>
-            <li class="side-nav__fantasy"> <img src="assets/deck.png" alt="Fantasy league"> Fantasy League</li>
-        </ul>
+        <nav>
+            <ul class="side-nav">
+                <li class="side-header__article"> 
+                    <a href="/article">
+                        <div>
+                            <img src="assets/article.png" alt="Article"> Article
+                        </div>
+                    </a>
+                </li>
+                <li class="side-nav__daygame"> 
+                    <a href="MatchDuJour">
+                        <div>
+                            <img src="assets/ball.png" alt="Match du jour">Match du jour
+                        </div>
+                    </a>
+                </li>
+                <li class="side-nav__teams"> 
+                    <a href="equipe">
+                        <div>
+                            <img src="assets/team.png" alt="Équipe"> Équipe
+                        </div>
+                    </a>
+                    </li>
+                <li class="side-nav__scoreboard"> 
+                    <a href="classement">
+                        <div>
+                            <img src="assets/scoreboard.png" alt="Classement"> Classement
+    
+                        </div>
+                    </a>
+                </li>
+                <li class="side-nav__tournament">
+                <a href="tournoi">
+                    <div>
+                         <img src="assets/tournament.png" alt="inseason tournament"> In Season Tournament  
+                        </div>
+                    </a>
+                </li>
+                <li class="side-nav__end"></li>
+            </ul>
+        </nav>
+        
         <section>
             <article class="grid-article">
                 <div class="grid-article__1"> <img src="assets/wemby.jfif" alt="Article wembanyama VS chet"></div>
@@ -91,7 +140,23 @@
                     </li>
                 </ul>
             </article>
+
+            <footer>
+                <div class="footer__header"> <h3> Site Basket</h3></div>
+                <div class="footer__content">
+                    <ul>
+                        <li>Réseau sociaux</li>
+                        <li>Contact</li>
+                        <li>Paramètres des cookies</li>
+                    </ul>
+                    <p>
+                        Site Basket, 2023
+                    </p>
+                </div>
+            </footer>
         </section>
     </div>
+
+    <script src="index.js"></script>
 </body>
 </html>
