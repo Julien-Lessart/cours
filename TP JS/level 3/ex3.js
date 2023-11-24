@@ -14,7 +14,7 @@
  */
 const transformerBase10EnBinaire = (nombre) => {
     let binaire = '';
-    while(nombre !== 1){
+    while(nombre >= 2){
         binaire += nombre % 2;
         nombre = Math.floor((nombre / 2));
     }
@@ -22,22 +22,23 @@ const transformerBase10EnBinaire = (nombre) => {
 }
 
 /**
- * Permet de transformer un nombre en base 10 en un nombre en binaire
+ * Permet de transformer un nombre en base 10 en un nombre en base N
  * @param {number} nombre Le nombre à transformer
  * @param {number} base La base voulu pour la transformation
  * @throws {Errors} Si le nombre est négatif OU n'est pas un nombre
- * @returns Retourne le nombre en binare
+ * @returns Retourne le nombre en base N
  */
 const transformerBase10EnBaseN = (nombre, base) => {
-    let binaire = '';
-    while(nombre !== 1 || nombre !== 0){
-        binaire += nombre % base;
+    let result = '';
+    while(nombre >= base){
+        result += nombre % base;
         nombre = Math.floor((nombre / base));
     }
-    return binaire.split('').reduce((acc, char) => char + acc, '');
+    if(base !== 2) result += nombre;
+    return result.split('').reduce((acc, char) => char + acc, '');
 }
 
-console.log(transformerBase10EnBinaire(156));
-console.log(transformerBase10EnBaseN(156, 2));
-console.log(transformerBase10EnBaseN(156, 8));
-console.log(transformerBase10EnBaseN(156, 16));
+console.log(transformerBase10EnBinaire(355));
+console.log(transformerBase10EnBaseN(355, 2));
+console.log(transformerBase10EnBaseN(355, 8));
+console.log(transformerBase10EnBaseN(664, 16));
